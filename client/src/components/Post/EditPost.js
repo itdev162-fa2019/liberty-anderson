@@ -51,7 +51,7 @@ const EditPost = ({ post, onPostUpdated }) => {
 				onPostUpdated(res.data);
 				history.push('/');
 			} catch (error) {
-				console.error(`Error creating post: $(error.reponse.data)`);
+				console.error(`Error creating post: $(error.response.data)`);
 			}
 		}
 	};
@@ -73,7 +73,7 @@ const EditPost = ({ post, onPostUpdated }) => {
 				value={body}
 				onChange={e => onChange(e)}
 				></textarea>
-				<button onClick={() => create()}>Submit</button>
+				<button onClick={() => update()}>Submit</button>
 		</div>
 	);
 };
